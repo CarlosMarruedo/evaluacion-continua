@@ -11,9 +11,11 @@ app.use(express.urlencoded({ extended: false }))
 
 
 app.get('/', (req, res) => {
-    
+    const imgSort = img.findAll().sort((a, b) => parseFloat(b.date) - parseFloat(a.date));
+
     const infoToRender = {
-        inMainMenu: true
+        inMainMenu: true,
+        img: imgSort
     }
 
     res.render('index', infoToRender)

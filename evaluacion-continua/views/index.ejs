@@ -16,7 +16,38 @@
 <body>
     <%- include('./partials/navigation.ejs') %>
 
-    <h1>List of </h1>
+    <h1>List of Images </h1>
+
+    <% if (img.length==0) { %>
+        <h3>There are no images yet
+        </h3>
+        <% } else { %>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>image</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% img.forEach( (img)=> { %>
+                        <tr>
+                            <td>
+                                <%= img.title.toUpperCase() %>
+                            </td>
+                            <td>
+                                <img alt="Qries" src=<%= img.url %> width="auto" height="auto"> 
+                            </td>
+                            <td>
+                                <%= img.date %>
+                            </td>
+                        </tr>
+                        <% }); %>
+                </tbody>
+            </table>
+            <% } %>
+
     
 
 </body>
