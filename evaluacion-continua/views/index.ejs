@@ -27,6 +27,7 @@
                     <tr>
                         <th>Title</th>
                         <th>image</th>
+                        <th>color</th>
                         <th>Date</th>
                     </tr>
                 </thead>
@@ -38,6 +39,10 @@
                             </td>
                             <td>
                                 <img alt="Qries" src=<%= img.url %> width="auto" height="auto"> 
+                            </td>
+                            <td>
+                                <div alt="Qries" style="background-color: <%=img.color%>;"
+                                    width="150px" height="150px"><%= img.color%></div>  
                             </td>
                             <td>
                                 <%= img.date %>

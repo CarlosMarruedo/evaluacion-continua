@@ -3,9 +3,11 @@ const app = express()
 
 const img = require('./models/images')
 
+
 app.set('view engine', 'ejs')
 
-app.use(express.static('views'))
+app.use(express.static('public'))
+
 app.use(express.urlencoded({ extended: false }))
 
 
@@ -30,7 +32,6 @@ app.get('/addImage', (req, res) => {
 })
 
 app.post('/addImage', (req, res) => {
-    
     if(img.urlAlreadySave(req.body.url)){
         
         res.status(404).send("La url ya existe en la BD");
