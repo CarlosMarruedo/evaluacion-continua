@@ -1,15 +1,15 @@
 const BBDD_cats = [{
     id: 1,
-    name: 'Loki',
-    race: 'Vulgaris'
+    url: '',
+    date: ''
 }, {
     id: 2,
-    name: 'Canela',
-    race: 'Red'
+    url: '',
+    date: ''
 }, {
     id: 3,
-    name: 'Tach',
-    race: 'Carey'
+    url: '',
+    date: ''
 }]
 const uuid = require('uuid')
 
