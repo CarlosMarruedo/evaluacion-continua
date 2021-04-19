@@ -9,22 +9,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add image</title>
+    <title>Add new Image</title>
 </head>
 
 <body>
     <%- include('./partials/navigation.ejs') %>
-    <form action="/cats/add-image" method="POST">
+    <form action="/addImage" method="POST">
         <fieldset>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name">
-            <label for="race">Race</label>
-            <select id="race" name="race">
-                <option value="Vulgaris">Vulgaris</option>
-                <option value="Red">Red</option>
-                <option value="Carey">Carey</option>
-                <option value="Siamese">Siamese</option>
-            </select>
+            <label for="title">Título</label>
+            <input type="text" id="title" name="title" maxlength="10" pattern="[a-zA-Z0-9_]+" required>
+            <label for="url">Url de la imagen</label>
+            <input type="url" id="url" name="url" required>
+            <label for="date">Fecha</label>
+            <input type="date" id="date" name="date" required>
             <input type="submit" value="Add">
         </fieldset>
     </form>
